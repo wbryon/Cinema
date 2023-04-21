@@ -12,7 +12,7 @@ import java.util.Locale;
 
 @Controller
 @RequestMapping("/admin/panel")
-public class AdminPanel {
+public class HallController {
 
     @GetMapping("/halls")
     public String homeInit(Locale locale, Model model) {
@@ -22,7 +22,7 @@ public class AdminPanel {
     @PostMapping("/halls")
     public String homere(@ModelAttribute("hall") Hall hall) {
 
-        // не читает по русский и не очищает атрибуты после первой отправки
+        // не читает по-русски и не очищает атрибуты после первой отправки
         System.out.println(hall.toString());
         return "halls";
     }
